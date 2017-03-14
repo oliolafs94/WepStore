@@ -1,0 +1,7 @@
+<div *ngIf="product">
+  <h3>{{product.sellerId}}</h3>
+  <h2>{{product.name}}</h2>
+  <img [src]="product.imagePath" style="width: 80px"/>
+  <i>{{product.price}}</i>
+  <button class="btn primary" (click)="onEdit()"> Change product</button>
+</div>

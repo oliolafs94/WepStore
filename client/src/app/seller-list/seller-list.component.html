@@ -1,0 +1,15 @@
+<div>
+  <div *ngIf="sellers">
+    <div class="container body-content">
+      <div *ngFor="let s of sellers">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+          <a (click)="onClickSeller(s.id)"> {{s.name}} </a>
+            <br />
+            <img [src]="s.imagePath " class="imageStyle"/>
+            <br />{{s.category}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="btn primary" (click)="addSeller()"> Create new seller, much wow, such seller! </button> 
+</div>

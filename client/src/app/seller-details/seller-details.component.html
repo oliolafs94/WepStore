@@ -1,0 +1,26 @@
+<!-- <div *ngIf='Seller'>
+  <h2>
+    {{seller.name}}
+  </h2>
+</div> -->
+<!-- {{sellerInfo.id}} -->
+  <div *ngIf="sellerInfo">
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+        <h2> {{sellerInfo.name}}</h2>
+        <br />
+          <img [src]="sellerInfo.imagePath" class="imageStyle"/>
+          <!-- <br />{{seller.sellerProduct}} -->
+      </div>
+  </div>
+
+
+
+
+
+  <div *ngFor="let p of sellerProducts">
+      <app-product-card
+        [product] = "p"
+        (productUpdated)= "onProductEdited($event)">
+
+      </app-product-card>
+  </div>
